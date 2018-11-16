@@ -12,7 +12,7 @@ Requires the following packages:
 - Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
 - Microsoft.Web.Infrastructure.1.0.0.0
 
-Clone Repository in Visual studio.  Press F5 to build.  This will open web browser for application to run.
+Clone Repository in Visual studio.  May need to connect tot he Data Source Press F5 to build.  This will open web browser for application to run.
 Application opens with index page.
 Click on Locations at top of page to experience CRUD: Create, Read, Update, Delete.
 
