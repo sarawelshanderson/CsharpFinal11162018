@@ -1,6 +1,8 @@
 # CsharpFinal11162018
 Code Louisville Final Project Fall 2018 C# Csharp
 
+I found datasets for Food Inspections for the State of Kentucky online https://catalog.data.gov .  From this dataset I created a very basic CRUD app for web browser that displays data, enables the user to add, delete and edit.
+
 Requires the following packages:
 
 - EntityFramework.6.2.0
