@@ -1,7 +1,7 @@
 # CsharpFinal11162018
 Code Louisville Final Project Fall 2018 C# Csharp
 
-I found datasets for Food Inspections for the State of Kentucky online https://catalog.data.gov .  From this dataset I created a very basic CRUD app for web browser that displays data, enables the user to add, delete and edit.
+I found datasets for Food Inspections for the State of Kentucky online https://catalog.data.gov .  From a small subset of this dataset  I created a very basic CRUD app for web browser that displays data, enables the user to add, delete and edit.
 
 Requires the following packages:
 
@@ -12,9 +12,10 @@ Requires the following packages:
 - Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
 - Microsoft.Web.Infrastructure.1.0.0.0
 
-Clone Repository in Visual studio.  May need to connect tot he Data Source Press F5 to build.  This will open web browser for application to run.
+Clone Repository in Visual studio.  May need to connect to the Data Source InspectionAppCTXT through the Server Explorer. Press F5 to build.  This will open web browser for application to run.
+
 Application opens with index page.
-Click on Locations at top of page to experience CRUD: Create, Read, Update, Delete.
+Click on Locations at top of page to experience CRUD: Create (Add Loaction Button), Read (Detail link), Update (Edit link), Delete (Delete link).
 
 Future commits would include:
 - search function
