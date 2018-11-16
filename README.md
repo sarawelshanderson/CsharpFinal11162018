@@ -12,7 +12,7 @@ Requires the following packages:
 - Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
 - Microsoft.Web.Infrastructure.1.0.0.0
 
-Clone Repository in Visual studio.  May need to connect to the Data Source InspectionAppCTXT through the Server Explorer. Press F5 to build.  This will open web browser for application to run.
+Clone Repository in Visual studio.  May need to connect to the Data Source InspectionAppCTXT by right clicking and "refreshing" InspectionAppCTXT through the Server Explorer. Press F5 to build.  This will open web browser for application to run.
 
 Application opens with index page.
 Click on Locations at top of page to experience CRUD: Create (Add Loaction Button), Read (Detail link), Update (Edit link), Delete (Delete link).
