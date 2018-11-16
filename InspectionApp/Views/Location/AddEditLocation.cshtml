@@ -1,0 +1,52 @@
+﻿@model InspectionApp.Models.LocationViewModel
+@{
+    var isEditMode = Model.LocationID != null;
+    ViewBag.Title = isEditMode ? "Edit " + Model.FullLocationInfo : "Add Location";
+
+}
+
+<!--Display selected data in editable text boxes, or display empty text boxes for adding new data-->
+<div class="row">
+    <div class="col-sm-6 col-xs-10">
+        @using (Html.BeginForm(isEditMode ? "EditLocation" : "AddLocation", "Location"))
+        {
+            @Html.HiddenFor(m => m.LocationID)
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationName)
+                @Html.TextBoxFor(m => m.LocationName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationAddress)
+                @Html.TextBoxFor(m => m.LocationAddress, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationCity)
+                @Html.TextBoxFor(m => m.LocationCity, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationState)
+                @Html.TextBoxFor(m => m.LocationState, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationZip)
+                @Html.TextBoxFor(m => m.LocationZip, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationType)
+                @Html.TextBoxFor(m => m.LocationType, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationInspectionDate)
+                @Html.TextBoxFor(m => m.LocationInspectionDate, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LocationGrade)
+                @Html.TextBoxFor(m => m.LocationGrade, new { @class = "form-control" })
+            </div>
+
+            <!--submit the information-->
+            <button type="submit" class="btn btn-primary">@(isEditMode ? "Save" : "Add")</button>
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+        }
+    </div>
+</div>

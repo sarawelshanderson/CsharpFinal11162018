@@ -1,0 +1,33 @@
+﻿/* =================================
+  Base Element Styles
+==================================== */
+body {
+    color: #636363;
+    font-size: 1.7em;
+}
+
+a {
+    text-decoration: none; /* remove underline from "a href" in header */
+    color: #003366;
+}
+
+footer {
+    background-color: #fffff;
+    margin-top: 100px;
+    padding: 20px 0 20px 0;
+    padding-bottom: 70px; /* add some padding to the bottom to prevent window frame from hiding it */
+    text-align: left;
+    font-size: 0.5em;
+}
+/* =================================
+  Override Bootstrap to change colors for navigation bar
+==================================== */
+.navbar-inverse {
+    background-color: #000066;
+    border-color: #000066;
+}
+
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        color: #000066;
+        background-color: #000066;
+    }

@@ -1,0 +1,64 @@
+﻿@model InspectionApp.Models.LocationListViewModel
+@{
+   
+    ViewBag.Title = "Locations";
+}
+
+<h2>List of Locations</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < Model.Locations.Count; i++)
+
+        {
+            <tr>
+                <td>@Model.Locations[i].FullLocationInfo</td>
+                <td>
+                    <!--on click, word DETAIL goes to LocationDetail View-->
+                    @Html.ActionLink("Detail", "LocationDetail", new { id = Model.Locations[i].LocationID })
+                    <!--on click, word EDIT goes to AddEditLocation View-->
+                    | @Html.ActionLink("Edit", "LocationEdit", new { id = Model.Locations[i].LocationID })
+                    <!--on click, word DELETE does not go to a View however opens a popup box-->
+                    | <a data-toggle="modal" href="@("#deleteLocationModal" + i)">Delete</a>
+                    <div class="modal fade" id="@("deleteLocationModal" + i)" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                @using (Html.BeginForm("DeleteLocation", "Location"))
+                                {
+                                    <input type="hidden" value="@Model.Locations[i].LocationID" name="LocationID" />
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Delete @Model.Locations[i].FullLocationInfo</h4>
+                                    </div>
+                                    <!-- warn with popup to verify user really wants to delete, fill popup with data record selected info-->
+                                    <div class="modal-body">
+                                        Are you sure you want to delete @Model.Locations[i].FullLocationInfo?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Yes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="col-sm-12 form-group">
+    <label>Total Locations:</label> @Model.TotalLocations
+</div>
+<div class="col-sm-12">
+    @Html.ActionLink("Add Location", "LocationAdd", null, new { @class = "btn btn-primary" })
+</div>
+
+
+

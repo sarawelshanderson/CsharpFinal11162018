@@ -1,0 +1,49 @@
+﻿@model InspectionApp.Models.LocationViewModel
+
+@{
+    ViewBag.Title = "Location Detail";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationName)
+        <br />@Html.DisplayFor(m => m.LocationName)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationAddress)
+        <br />@Html.DisplayFor(m => m.LocationAddress)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationCity)
+        <br />@Html.DisplayFor(m => m.LocationCity)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationState)
+        <br />@Html.DisplayFor(m => m.LocationState)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationZip)
+        <br />@Html.DisplayFor(m => m.LocationZip)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationType)
+        <br />@Html.DisplayFor(m => m.LocationType)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationInspectionDate)
+        <br />@Html.DisplayFor(m => m.LocationInspectionDate)
+    </div>
+    <div class="col-sm-12 form-group">
+        @Html.LabelFor(m => m.LocationGrade)
+        <br />@Html.DisplayFor(m => m.LocationGrade)
+    </div>
+
+
+
+
+    <div class="col-sm-12">
+        @Html.ActionLink("Done", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
